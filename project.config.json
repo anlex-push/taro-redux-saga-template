@@ -1,7 +1,7 @@
 {
   "miniprogramRoot": "./dist",
-  "projectname": "invitation",
-  "description": "一个请帖项目",
+  "projectname": "taro-redux-saga-template",
+  "description": "一套基于taro框架集成redux-saga的开发小程序模板",
   "appid": "touristappid",
   "setting": {
     "urlCheck": true,
