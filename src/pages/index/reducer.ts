@@ -1,6 +1,7 @@
-import { AnyAction } from "redux"
+import { AnyAction } from "redux";
 import { rootSelectorFactory } from "../../utils/rootSelectorFactory";
-import { addAction, minusAction } from "./action"
+import { addAction, minusAction } from "./action";
+import update from "immutability-helper";
 
 const INITIAL_STATE = {
   num: 0
@@ -9,17 +10,15 @@ const INITIAL_STATE = {
 export function indexPageReducer (state = INITIAL_STATE, action:AnyAction) {
 
   if(addAction.match(action)){
-    return {
-      ...state,
-      num: state.num + 1
-    };
+    return update(state, {
+      num: { $set: state.num + 1 }
+    });
   }
 
   if(minusAction.match(action)){
-    return {
-      ...state,
-      num: state.num - 1
-    };
+    return update(state, {
+      num: { $set: state.num - 1 }
+    });
   }
 
   return state;
