@@ -1,8 +1,8 @@
 {
-  "name": "invitation",
+  "name": "taro-redux-saga-template",
   "version": "1.0.0",
   "private": true,
-  "description": "一个请帖项目",
+  "description": "一套基于taro框架集成redux-saga的开发小程序模板",
   "templateInfo": {
     "name": "redux",
     "typescript": true,
